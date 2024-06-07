@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #093931ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  z-index: 1000;
+}
+
+.logo {
+  flex-shrink: 0;
+  font-size: 2rem;
+  color: #f4ce80;
+  text-decoration: none;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: Cormorant Garamond;
+}
+
+.navbar {
+  display: flex;
+  margin-right: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: Manrope;
+  position: relative;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #f4ce80;
+}
+
+.navbar ul li a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f4ce80;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+/* Header section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 110px 40px;
+  background-image: url(../assets/section-header.png);
+}
+
+.header-section-text {
+  max-width: 500px;
+}
+
+.header-section-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #f4ce80;
+  font-family: Cormorant Garamond;
+  line-height: 1.6;
+}
+
+.btn {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.header-section-images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.header-section-images figure {
+  margin: 0;
+}
+
+.header-section-images .image1 {
+  width: 407px;
+  height: 543px;
+  border-radius: 10px;
+  margin-right: 220px;
+}
+
+.header-section-images .image2 {
+  width: 241px;
+  height: 321px;
+  position: absolute;
+  top: 100px;
+  right: 45px;
+  border-radius: 10px;
+}
