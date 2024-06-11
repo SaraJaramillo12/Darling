@@ -119,17 +119,33 @@
   width: 407px;
   height: 543px;
   border-radius: 10px;
-  margin-right: 220px;
 }
 
-.header-section-images .image2 {
+#advertising {
+  width: 241px;
+  height: 321px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  right: 5%;
+}
+
+.advertising-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* .header-section-images .image2 {
   width: 241px;
   height: 321px;
   position: absolute;
   top: 100px;
   right: 45px;
   border-radius: 10px;
-}
+} */
 
 .information {
   padding: 40px 20px;
