@@ -385,3 +385,183 @@
   margin-left: 55px;
   margin-bottom: 45px;
 }
+
+footer.footer {
+  padding: 40px 20px;
+  background-color: #003d31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.testimonial-header {
+  max-width: 500px;
+  margin-right: 20px;
+  color: whitesmoke;
+}
+
+.testimonial-header h2 {
+  font-family: Cormorant Garamond;
+  font-size: 48px;
+  margin: 0;
+  font-weight: bold;
+  margin-top: 150px;
+}
+
+.testimonial-header p {
+  position: flex;
+  font-family: Manrope;
+  margin: 10px 0 0;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  background-color: #171A1F4D;
+  padding: 10 px;
+  border-radius:10px;
+  flex-grow: 1;
+}
+
+.testimonial-image {
+  width: 300px;
+  height: 375px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  flex-grow: 1;
+  margin-right: 20px;
+  color: whitesmoke;
+}
+
+.testimonial-text p {
+  font-size: 16px;
+  font-family: Manrope;
+  line-height: 1.5em;
+}
+
+.testimonial-text footer {
+  margin-top: 10px;
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.testimonial-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+}
+
+.brand h2 {
+  font-family: Manrope;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 400;
+  color: #e6b800;
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+
+.links {
+  font-family: Manrope;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.newsletter h3 {
+  font-family: Cormorant Garamond;
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.newsletter p {
+  font-family: Manrope;
+  margin: 10px 0;
+  font-size: 15px;
+  color: white;
+}
+
+.newsletter form {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 1px;
+  border: 1px solid #fff;
+  border-radius: 18px 0px 0px 18px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.newsletter button {
+  padding: 10px;
+  color: #6B4A09FF;
+  border: none;
+  border-radius: 0px 18px 18px 0px;
+  cursor: pointer;
+  background: #F2C66DFF;
+  font-weight: bold;
+}
+
+.newsletter button:hover {
+  color: #6B4A09FF;
+  background: rgb(248, 205, 119);
+}
+
+.social-icons i {
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
