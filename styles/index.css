@@ -366,3 +366,22 @@
   font-size: 16px;
   border-radius: 25px;
 }
+
+.our-history h1 {
+  font-size: 40px;
+  color: #274546;
+  text-align: center;
+  margin-bottom: 60px;
+  background: #efeee5;
+}
+
+.our-history .video-history {
+  background: #efeee5;
+}
+
+.video-image img {
+  width: 1176px;
+  height: 368px;
+  margin-left: 55px;
+  margin-bottom: 45px;
+}
