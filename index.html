@@ -12,22 +12,83 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">Darling.</a>
-
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li>
-            <a href="#"><i class="bx bx-user"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="bx bx-cart"></i></a>
-          </li>
-        </ul>
+      <nav class="header__nav">
+        <a class="header__logo" href="">Darling</a>
+        <div class="header__links">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li class="active"><a href="">Colletions</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <div class="header__buttons">
+            <button>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 8.5C11.6569 8.5 13 7.15685 13 5.5C13 3.84315 11.6569 2.5 10 2.5C8.34315 2.5 7 3.84315 7 5.5C7 7.15685 8.34315 8.5 10 8.5Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 11C8.27609 11 6.62279 11.6848 5.40381 12.9038C4.18482 14.1228 3.5 15.7761 3.5 17.5L16.5 17.5C16.5 15.7761 15.8152 14.1228 14.5962 12.9038C13.3772 11.6848 11.7239 11 10 11Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 2.5L5.5 2.5L5.5 10C5.5 10.828 6.172 11.5 7 11.5L14.419 11.5C15.065 11.5 15.638 11.087 15.842 10.474L17.5 5.5L5.5 5.5"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6 17.5C6.82843 17.5 7.5 16.8284 7.5 16C7.5 15.1716 6.82843 14.5 6 14.5C5.17157 14.5 4.5 15.1716 4.5 16C4.5 16.8284 5.17157 17.5 6 17.5Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 17.5C15.8284 17.5 16.5 16.8284 16.5 16C16.5 15.1716 15.8284 14.5 15 14.5C14.1716 14.5 13.5 15.1716 13.5 16C13.5 16.8284 14.1716 17.5 15 17.5Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul></ul>
+        </div>
+        <button class="header__menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            viewBox="0 -960 960 960"
+            width="40px"
+            fill="#F5D38EFF"
+          >
+            <path
+              d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+            />
+          </svg>
+        </button>
       </nav>
     </header>
     <main>
@@ -43,7 +104,12 @@
           <!-- <img src="assets/header-2.png" alt="Jewelry 2" class="image2" /> -->
         </div>
         <div id="advertising">
-          <video src="assets/darling.mp4" class="advertising-video" autoplay muted></video>
+          <video
+            src="assets/darling.mp4"
+            class="advertising-video"
+            autoplay
+            muted
+          ></video>
         </div>
       </section>
       <section class="Information">
@@ -69,7 +135,7 @@
       <section id="featured-products">
         <div class="featured-products">
           <div class="product-list">
-            <div class="product-item">
+            <div class="header-item-product">
               <h2>Featured Products</h2>
               <p>
                 Quia Lorem lorem belarium quia est officia est commdo commdo
@@ -77,33 +143,35 @@
               </p>
               <button class="shop-now">Shop now</button>
             </div>
-            <div class="product-item">
-              <figure>
-                <img src="assets/feacture-1.webp" alt="Radiance Necklace" />
-              </figure>
-              <p>Radiance Necklace</p>
-              <p>$708.96</p>
-            </div>
-            <div class="product-item">
-              <figure>
-                <img src="assets/feacture-2.webp" alt="Exquisite Earrings" />
-              </figure>
-              <p>Exquisite Earrings</p>
-              <p>$123.20</p>
-            </div>
-            <div class="product-item">
-              <figure>
-                <img src="assets/feacture-3.webp" alt="Glamour Necklace" />
-              </figure>
-              <p>Glamour Necklace</p>
-              <p>$620.75</p>
-            </div>
-            <div class="product-item">
-              <figure>
-                <img src="assets/feacture-1.webp" alt="Delights" />
-              </figure>
-              <p>Delights</p>
-              <p>$527.71</p>
+            <div class="product-items-wrapper">
+              <div class="product-item">
+                <figure>
+                  <img src="assets/feacture-1.webp" alt="Radiance Necklace" />
+                </figure>
+                <p>Radiance Necklace</p>
+                <p>$708.96</p>
+              </div>
+              <div class="product-item">
+                <figure>
+                  <img src="assets/feacture-2.webp" alt="Exquisite Earrings" />
+                </figure>
+                <p>Exquisite Earrings</p>
+                <p>$123.20</p>
+              </div>
+              <div class="product-item">
+                <figure>
+                  <img src="assets/feacture-3.webp" alt="Glamour Necklace" />
+                </figure>
+                <p>Glamour Necklace</p>
+                <p>$620.75</p>
+              </div>
+              <div class="product-item">
+                <figure>
+                  <img src="assets/feacture-1.webp" alt="Delights" />
+                </figure>
+                <p>Delights</p>
+                <p>$527.71</p>
+              </div>
             </div>
           </div>
         </div>
@@ -116,37 +184,31 @@
             <figure>
               <img src="assets/colletion-1.webp" alt="Luxurious Lustre" />
             </figure>
-            <p>Luxurious Lustre</p>
           </div>
           <div class="collection-item">
             <figure>
               <img src="assets/colletion-2.webp" alt="Radiant Reflections" />
             </figure>
-            <p>Radiant Reflections</p>
           </div>
           <div class="collection-item">
             <figure>
               <img src="assets/colletion-3.webp" alt="Majestic Moments" />
             </figure>
-            <p>Majestic Moments</p>
           </div>
           <div class="collection-item">
             <figure>
               <img src="assets/colletion-4.webp" alt="Blissful Baubles" />
             </figure>
-            <p>Blissful Baubles</p>
           </div>
           <div class="collection-item">
             <figure>
               <img src="assets/colletion-5.webp" alt="Timeless Treasures" />
             </figure>
-            <p>Timeless Treasures</p>
           </div>
           <div class="collection-item">
             <figure>
               <img src="assets/colletion-6.webp" alt="Divine Diamonds" />
             </figure>
-            <p>Divine Diamonds</p>
           </div>
         </div>
         <button class="shop-now-1">Shop now</button>
@@ -155,7 +217,7 @@
       <section id="selection-products">
         <div class="selection-products">
           <div class="selection-list">
-            <div class="selection-item">
+            <div class="header-item">
               <h2>Our Selection of Jewelry</h2>
               <p>
                 Nulla ad magna exercitation elit reprehenderit cupidatat veniam
@@ -163,42 +225,50 @@
               </p>
               <button class="selection-shop-now">Shop now</button>
             </div>
-
-            <div class="selection-item">
-              <figure>
-                <img src="assets/selection-1.webp" alt="Radiance Necklace" />
-              </figure>
-              <p>Shimmering ring</p>
-              <p>$168.76</p>
-            </div>
-            <div class="selection-item">
-              <figure>
-                <img src="assets/selection-2.webp" alt="Exquisite Earrings" />
-              </figure>
-              <p>Exquisite Earrings</p>
-              <p>$123.20</p>
-            </div>
-            <div class="selection-item">
-              <figure>
-                <img src="assets/selection-3.webp" alt="Glamour Necklace" />
-              </figure>
-              <p>Glamour Necklace</p>
-              <p>$620.75</p>
-            </div>
-            <div class="selection-item">
-              <figure>
-                <img src="assets/selection-1.webp" alt="Delights" />
-              </figure>
-              <p>Delights</p>
-              <p>$527.71</p>
+            <div class="selection-items-wrapper">
+              <div class="selection-item">
+                <figure>
+                  <img src="assets/selection-1.webp" alt="Radiance Necklace" />
+                </figure>
+                <p>Shimmering ring</p>
+                <p>$168.76</p>
+              </div>
+              <div class="selection-item">
+                <figure>
+                  <img src="assets/selection-2.webp" alt="Exquisite Earrings" />
+                </figure>
+                <p>Exquisite Earrings</p>
+                <p>$123.20</p>
+              </div>
+              <div class="selection-item">
+                <figure>
+                  <img src="assets/selection-3.webp" alt="Glamour Necklace" />
+                </figure>
+                <p>Glamour Necklace</p>
+                <p>$620.75</p>
+              </div>
+              <div class="selection-item">
+                <figure>
+                  <img src="assets/selection-4.webp" alt="Luxury" />
+                </figure>
+                <p>Luxury</p>
+                <p>$327.71</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="our-history">
         <h1>Our history</h1>
         <div class="video-history">
-          <video src="assets/our-history.mp4" class="history" controls autoplay></video>
+          <video
+            src="assets/our-history.mp4"
+            class="history"
+            controls
+            autoplay
+            muted
+          ></video>
         </div>
       </section>
     </main>
@@ -208,8 +278,7 @@
         <div class="testimonial-header">
           <h2>From the people</h2>
           <p>
-            We love hearing from our customers! 
-            You're the reason we're here and
+            We love hearing from our customers! You're the reason we're here and
             the reason we do what we do.
           </p>
         </div>
@@ -262,7 +331,7 @@
             <input type="email" placeholder="Input your email" />
             <button type="submit">Subscribe</button>
           </form>
-  
+
           <div class="social-icons">
             <i class="bx bxl-twitter"></i>
             <i class="bx bxl-facebook-circle"></i>
@@ -272,7 +341,5 @@
         </div>
       </section>
     </footer>
-  
   </body>
-
 </html>
