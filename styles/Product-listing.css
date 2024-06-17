@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --color-primary: #093931ff;
+  --color-secondary: #f5d38eff;
+  --color-links: #fff;
+  --tipography-headings: "Cormorant Garamond", serif;
+  --tipograhy-body: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--tipograhy-body);
+}
+
+.header__nav {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.625rem 8.25rem;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+}
+
+.header__links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__links ul li {
+  border-bottom: 4px solid transparent;
+  border-radius: 0.13rem;
+  padding: 0.65625rem 1.35188rem;
+}
+
+.header__links ul li a {
+  text-decoration: none;
+  color: var(--color-links);
+  font-family: var(--tipograhy-body);
+}
+
+.header__logo {
+  font-family: var(--tipography-headings);
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 1.875rem;
+  line-height: 2.875rem;
+  font-weight: 400;
+}
+
+.header__links ul .active {
+  border-color: var(--color-secondary);
+}
+
+.header__links ul .active a {
+  color: var(--color-secondary);
+}
+
+.header__buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__buttons button:hover svg path {
+  stroke: var(--color-secondary);
+}
+
+.header__menu {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+
+/* Header section */
+.header-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 110px 40px;
+  background-image: url(../assets/section-header.png);
+}
+
+.header-section-text {
+  max-width: 500px;
+}
+
+.header-section-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #f4ce80;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.6;
+}
+
+.btn {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+/* main {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+} */
+
+.product-search {
+  background-image: url(../assets/section-header.png);
+  width: 100%;
+  max-width: 100%; /* Ajusta el ancho máximo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.our_products h2{
+  font-family: var(--tipography-headings);
+  font-size: 3.875em;
+  line-height: 82px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+}
+
+.search__bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.search__bar input {
+  width: 100%;
+  height: 51px;
+  border-radius: 26px;
+  border: 1px solid #ccc;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.search__bar button {
+  position: absolute;
+  right: 10px;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.product__filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  margin: 20px auto; /* Centra la sección horizontalmente */
+}
+
+.filter__buttons {
+  display: flex;
+  gap: 15px;
+  font-family: var(--tipograhy-body);
+  
+}
+
+.filter {
+  padding: 10px 35px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 28px;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+  color: var(--color-primary);
+}
+
+.filter:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.sort__dropdown {
+  margin-left: auto;
+}
+
+.sort__dropdown select {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 0.875;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+main{
+  padding: 3.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.4rem, 1fr));
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 1.5rem;
+}
+
+.card{
+  border-radius: 8px; 
+  box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; 
+  aspect-ratio: 276/404;
+}
+
+.card figure{
+  width: 100%;
+  aspect-ratio: 276/320;
+}
+
+.card figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card div h2{
+  font-family: var(--tipography-headings);
+  font-size: 1.25rem;
+}
+
+.card div p{
+  font-family: var(--tipograhy-body);
+}
+
+.card div{
+  padding: 0.75em 1.25em 0.75em 0.75em; 
+}
+
+.pagination_container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 10vh;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page_arrow, .page_number {
+  border: none;
+  background-color: transparent;
+  font-size: 1.25em;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.page_arrow:hover, .page_number:hover {
+  color: #000;
+}
+
+.page_number_active {
+  color: #1f3d30; /* Color verde oscuro */
+  border: 1px solid #1f3d30;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.dots {
+  font-size: 1.25em;
+  color: #666;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.feature {
+  max-width: 300px;
+  padding: 20px;
+}
+
+.feature button {
+  background-color: var(--color-links);
+}
+
+.feature-icon {
+  width: 50px; /* Ajusta el tamaño del icono según sea necesario */
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.4em;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .features {
+      flex-direction: column;
+      gap: 40px;
+  }
+
+  .feature {
+      max-width: 80%;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .card:nth-child(9){
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+
+  .card:nth-child(9) figure{
+    aspect-ratio: 576/734;
+  }
+
+  .card:nth-child(9) h2{
+    font-size: 1.75rem;
+  }
+
+}
