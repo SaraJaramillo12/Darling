@@ -347,6 +347,131 @@ height: 10vh;
   }
 }
 
+.footer {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer_logo h2 {
+  font-size: 1.25em;
+  font-family: var(--tipography-headings);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.footer_logo p {
+  margin: 150px 0 0;
+  font-size: 0.75em;
+}
+
+.footer_links {
+  display: flex;
+  gap: 20px;
+  font-family: var(--tipograhy-body);
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_column a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875em;
+}
+
+.footer_column a:hover {
+  text-decoration: underline;
+}
+
+.footer_subscribe {
+  max-width: 300px;
+}
+
+.footer_subscribe h3 {
+  margin: 0 0 10px;
+  font-size: 1.25em;
+  font-family: var(--tipography-headings);
+}
+
+.footer_subscribe p {
+  margin: 0 0 20px;
+  font-size: 0.75em;
+  font-family: var(--tipograhy-body);
+}
+
+.subscribe_form {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.subscribe_form input {
+  padding: 10px;
+  border: none;
+  border-radius: 25px 0px 0px 25px;
+  flex: 1;
+}
+
+.subscribe_form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+
+  cursor: pointer;background-color: var(--color-secondary);
+}
+
+.subscribe_form button:hover {
+  background-color: var(--color-secondary)
+}
+
+.social_icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.social_icons a img {
+  width: 24px;
+  height: 24px;
+  justify-content: flex-end;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .footer_container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer_links {
+      margin: 20px 0;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .footer_subscribe {
+      max-width: 100%;
+  }
+
+  .subscribe_form {
+      flex-direction: column;
+  }
+}
+
 
 @media (min-width: 600px) {
   .card:nth-child(9){
@@ -363,3 +488,4 @@ height: 10vh;
   }
 
 }
+
