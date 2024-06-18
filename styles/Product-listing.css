@@ -182,7 +182,7 @@
   max-width: 1000px;
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
-  margin: 20px auto; /* Centra la sección horizontalmente */
+  margin: 20px auto;
 }
 
 .filter__buttons {
@@ -193,12 +193,12 @@
 }
 
 .filter {
-  padding: 10px 35px;
+  padding: 8px 25px;
   border: none;
   background-color: #fff;
   cursor: pointer;
   border-radius: 28px;
-  font-size: 1.5em;
+  font-size: 1em;
   transition: background-color 0.3s ease;
   color: var(--color-primary);
 }
