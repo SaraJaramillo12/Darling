@@ -45,7 +45,7 @@
                 />
               </svg>
             </button>
-            <button>
+            <button id="cart-icon">
               <svg
                 width="20"
                 height="20"
@@ -91,7 +91,60 @@
         </button>
       </nav>
     </header>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-content">
+        <h3>Your cart</h3>
+        <button id="close-cart-button">✖</button>
+        <div class="cart-items">
+          <div class="product-item">
+            <figure>
+              <a href="productDetail.html">
+                <img src="/assets/product-10.webp" alt="Luxury Charms Ring" />
+              </a>
+            </figure>
+            <div class="product-details">
+              <p>Luxury Charms Ring</p>
+              <p>$620.73</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <figure>
+              <a href="productDetail.html">
+                <img src="/assets/product-11.webp" alt="Exquisite Earrings" />
+              </a>
+            </figure>
+            <div class="product-details">
+              <p>Exquisite Earrings</p>
+              <p>$125.28</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <figure>
+              <a href="productDetail.html">
+                <img src="/assets/product-12.webp" alt="Delights Earrings" />
+              </a>
+            </figure>
+            <div class="product-details">
+              <p>Delights Earrings</p>
+              <p>$327.71</p>
+            </div>
+          </div>
+        </div>
+        <div class="cart-total">
+          <p>Total: $<span id="cart-total-amount">1073.72</span></p>
+        </div>
+        <button id="continue-btn">Continue to checkout</button>
+      </div>
+    </aside>
+
     <main>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> &gt;
+        <a href="shop.html">Shop</a> &gt;
+        <span>Luxury Charms Ring</span>
+      </nav>
+      
       <article class="product-detail">
         <div class="image-gallery">
           <img
@@ -220,30 +273,21 @@
           <div class="product-list">
             <div class="product-item">
               <figure>
-                <img
-                  src="/assets/feacture-1.webp"
-                  alt="Radiance Necklace"
-                />
+                <img src="/assets/feacture-1.webp" alt="Radiance Necklace" />
               </figure>
               <p>Radiance Necklace</p>
               <p>$708.96</p>
             </div>
             <div class="product-item">
               <figure>
-                <img
-                  src="/assets/feacture-2.webp"
-                  alt="Exquisite Earrings"
-                />
+                <img src="/assets/feacture-2.webp" alt="Exquisite Earrings" />
               </figure>
               <p>Exquisite Earrings</p>
               <p>$123.20</p>
             </div>
             <div class="product-item">
               <figure>
-                <img
-                  src="/assets/feacture-3.webp"
-                  alt="Glamour Necklace"
-                />
+                <img src="/assets/feacture-3.webp" alt="Glamour Necklace" />
               </figure>
               <p>Glamour Necklace</p>
               <p>$620.75</p>
@@ -261,72 +305,73 @@
     </main>
 
     <footer class="footer">
-        <section class="testimonial">
-          <div class="testimonial-header">
-            <h2>From the people</h2>
-            <p>
-              We love hearing from our customers! You're the reason we're here and
-              the reason we do what we do.
+      <section class="testimonial">
+        <div class="testimonial-header">
+          <h2>From the people</h2>
+          <p>
+            We love hearing from our customers! You're the reason we're here and
+            the reason we do what we do.
+          </p>
+        </div>
+        <div class="testimonial-content">
+          <img
+            src="/assets/footer-opinion.webp"
+            alt="Customer image"
+            class="testimonial-image"
+            id="testimonial-image"
+          />
+          <blockquote class="testimonial-text">
+            <p id="testimonial-text">
+              The ring itself is stunning, with a beautiful design that catches
+              the light and sparkles from every angle. The quality of the
+              material used is evident, as the ring feels substantial and
+              durable. The gemstone is exquisite, with a vibrant color and
+              exceptional clarity.
             </p>
-          </div>
-          <div class="testimonial-content">
-            <img
-              src="/assets/footer-opinion.webp"
-              alt="Customer image"
-              class="testimonial-image"
-              id="testimonial-image"
-            />
-            <blockquote class="testimonial-text">
-              <p id="testimonial-text">
-                The ring itself is stunning, with a beautiful design that catches
-                the light and sparkles from every angle. The quality of the
-                material used is evident, as the ring feels substantial and
-                durable. The gemstone is exquisite, with a vibrant color and
-                exceptional clarity.
-              </p>
-              <footer id="testimonial-footer">
-                <strong>Anna Fernandez</strong><br />USA
-              </footer>
-            </blockquote>
-            <nav class="testimonial-nav">
-              <button class="nav-button" onclick="prevTestimonial()">
-                &#8249;
-              </button>
-              <button class="nav-button" onclick="nextTestimonial()">
-                &#8250;
-              </button>
-            </nav>
-          </div>
-        </section>
-  
-        <section class="footer-links">
-          <div class="brand">
-            <h2>Darling.</h2>
-            <p>&copy; 2022 Brand, Inc.</p>
-          </div>
-          <nav class="links">
-            <a href="shop.html">Shop</a>
-            <a href="#">Collections</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <footer id="testimonial-footer">
+              <strong>Anna Fernandez</strong><br />USA
+            </footer>
+          </blockquote>
+          <nav class="testimonial-nav">
+            <button class="nav-button" onclick="prevTestimonial()">
+              &#8249;
+            </button>
+            <button class="nav-button" onclick="nextTestimonial()">
+              &#8250;
+            </button>
           </nav>
-          <div class="newsletter">
-            <h3>Subscribe to our newsletter</h3>
-            <p>For product announcements and exclusive insights</p>
-            <form>
-              <input type="email" placeholder="Input your email" />
-              <button type="submit">Subscribe</button>
-            </form>
-            <div class="social-icons">
-              <i class="bx bxl-twitter"></i>
-              <i class="bx bxl-facebook-circle"></i>
-              <i class="bx bxl-linkedin"></i>
-              <i class="bx bxl-youtube"></i>
-            </div>
+        </div>
+      </section>
+
+      <section class="footer-links">
+        <div class="brand">
+          <h2>Darling.</h2>
+          <p>&copy; 2022 Brand, Inc.</p>
+        </div>
+        <nav class="links">
+          <a href="shop.html">Shop</a>
+          <a href="#">Collections</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </nav>
+        <div class="newsletter">
+          <h3>Subscribe to our newsletter</h3>
+          <p>For product announcements and exclusive insights</p>
+          <form>
+            <input type="email" placeholder="Input your email" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="social-icons">
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-facebook-circle"></i>
+            <i class="bx bxl-linkedin"></i>
+            <i class="bx bxl-youtube"></i>
           </div>
-        </section>
-      </footer>
+        </div>
+      </section>
+    </footer>
+    <script src="/scripts/details-products.js"></script>
   </body>
 </html>

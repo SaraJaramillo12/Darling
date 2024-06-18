@@ -711,11 +711,11 @@
    width: 100%;
    margin-top: -2rem;
 
-    /*order: 1;
+    order: 1;
     align-items: center;
     width: 100%;
     margin-top: -20rem;
-    /*margin-left: 15rem; */
+    margin-left: 15rem;
   }
 
   .header-section-images .image1 {
@@ -1033,9 +1033,9 @@
   }
 
   .image1 {
-    display: block; /* Asegura que la imagen sea un bloque para centrado */
+    display: block; 
     width: 80%;
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin: 0 auto;
   }
 
   .info {
