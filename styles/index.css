@@ -1028,6 +1028,15 @@
     font-size: 24px;
   }
 
+  #advertising {
+    max-width: 200px;
+    height: 267px;
+    margin-top: 20px;
+    position: relative;
+    right: 2rem;
+    top: 2rem;
+  }
+
   .advertising-video {
     display: none;
   }
