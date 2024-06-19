@@ -235,7 +235,8 @@
 .product-info h1 {
   font-size: 1.8em;
   margin: 0;
-  color: #2b2b2b;
+  font-family: var(--tipography-headings);
+  color: var(--color-primary);
 }
 
 .product-info .product-code {
@@ -280,11 +281,11 @@
 }
 
 .color-options .color-rose-gold {
-  background-color: #b76e79;
+  background-color: #e6a879;
 }
 
 .color-options .selected {
-  border: 2px solid #2b2b2b;
+  border: 2px solid var(--color-primary);
 }
 
 .size-selection {
@@ -310,12 +311,12 @@
   border: 1px solid #ddd;
   border-radius: 3px;
   cursor: pointer;
+  color: gray;
 }
 
 .size-options .selected {
-  background-color: #2b2b2b;
-  color: white;
-  border: 1px solid #2b2b2b;
+  color: #b8860b;
+  border: 1px solid #b8860b;
 }
 
 .quantity-selection {
@@ -334,8 +335,7 @@
 }
 
 .quantity-input button {
-  background-color: #2b2b2b;
-  color: white;
+  color: black;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -387,6 +387,9 @@
 
 .additional-info details {
   margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 
 /* End section Details Products */
@@ -567,13 +570,20 @@
 
 .product-item p {
   margin: 10px 0 0;
-  font-family: var(--tipography-paragraphs);
   color: #333;
+}
+
+.head {
+  margin: 10px 0 0;
+  font-family: var(--tipography-headings);
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
 }
 
 .product-item p:nth-of-type(2) {
   margin-top: 5px;
-  font-weight: bold;
+  
   color: #000;
 }
 
