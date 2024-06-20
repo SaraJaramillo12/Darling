@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --color-primary: #093931ff;
+  --color-secondary: #f5d38eff;
+  --color-links: #fff;
+  --tipography-headings: "Cormorant Garamond", serif;
+  --tipograhy-body: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--tipograhy-body);
+  overflow-x: hidden;
+}
+
+/* Nav section */
+.header__nav {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.625rem 8.25rem;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+}
+
+.header__links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__links ul li {
+  border-bottom: 4px solid transparent;
+  border-radius: 0.13rem;
+  padding: 0.65625rem 1.35188rem;
+}
+
+.header__links ul li a {
+  text-decoration: none;
+  color: var(--color-links);
+  font-family: var(--tipograhy-body);
+}
+
+.header__logo {
+  font-family: var(--tipography-headings);
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 1.875rem;
+  line-height: 2.875rem;
+  font-weight: 400;
+}
+
+.header__links ul .active {
+  border-color: var(--color-secondary);
+}
+
+.header__links ul .active a {
+  color: var(--color-secondary);
+}
+
+.header__buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__buttons button:hover svg path {
+  stroke: var(--color-secondary);
+}
+
+.header__menu {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+
+/* End Nav section */
+
+/* Section check-out */
+
+.checkout-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.order-summary,
+.payment-method {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary {
+  flex: 1 1 60%;
+  max-width: 800px;
+}
+
+.payment-method {
+  flex: 1 1 35%;
+  max-width: 348px;
+}
+
+.proceed-payment {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background: #274546;
+  color: #fff;
+  border-radius: 50rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.order-summary h2,
+.payment-method h2 {
+  margin-bottom: 1rem;
+  font-family: var(--tipography-headings);
+}
+
+.payment-method h6 {
+  color: #379ae6ff;
+  margin-bottom: 1rem;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item figure {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.item img {
+  max-width: 60px;
+  border-radius: 5px;
+}
+
+.item .details {
+  flex-grow: 1;
+}
+
+.item .price {
+  margin-right: 15rem;
+}
+
+.voucher {
+  margin-bottom: 1rem;
+}
+
+.payment-card {
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid #0d554aff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #0d554aff;
+}
+
+.voucher label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.voucher input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.voucher button {
+  padding: 0.5rem;
+  border: none;
+  background: #f4ce80;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  margin-bottom: 1rem;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+}
+
+.summary span {
+  font-weight: bold;
+}
+
+.summary h6 {
+  color: var(--color-primary);
+  font-family: var(--tipography-headings);
+  font-size: 20px;
+}
+
+.summary hr {
+  color: gray;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.mastercard {
+  position: relative;
+  margin-top: 7px;
+  right: 3rem;
+}
+
+.password {
+  position: relative;
+  margin-top: 7px;
+}
+
+.total {
+  color: var(--color-primary);
+}
+
+.total span {
+  color: red;
+}
+/* End Section check-out */
+
+/* Media queries */
+@media (max-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__links {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .checkout-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-summary,
+  .payment-method {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .order-summary,
+  .payment-method {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .item img {
+    max-width: 50px;
+  }
+
+  .order-summary,
+  .payment-method {
+    padding: 15px;
+  }
+}

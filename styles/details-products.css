@@ -629,6 +629,7 @@ footer.footer {
   margin-right: 20px;
   color: whitesmoke;
   flex: 1;
+  padding: 0 50px;
 }
 
 .testimonial-header h2 {
@@ -647,21 +648,19 @@ footer.footer {
 .testimonial-content {
   display: flex;
   align-items: center;
-  width: 50%;
-  background-color: #00594d;
-  padding: 10px;
-  border-radius: 10px;
-  flex-grow: 1;
+  width: 696px;
+  height: 375px;
+  background-color: #171A1F4D;
   flex-wrap: wrap;
 }
 
 .testimonial-image {
   width: 100%;
   max-width: 300px;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
+  max-height: 375px;
   margin-right: 20px;
-  object-fit: cover;
+  object-fit: inherit;
   flex: 1;
 }
 
@@ -687,8 +686,9 @@ footer.footer {
   display: flex;
   flex-direction: row;
   align-self: self-end;
-  position: relative;
-  right: 20rem;
+  position: absolute;
+  right: 6rem;
+  margin-bottom: -40px;
 }
 
 .nav-button {
@@ -935,13 +935,4 @@ footer.footer {
     width: 100%;
   }
 
-  /* .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    left: 4.5rem;
-    position: relative;
-    padding: 15px;
-  } */
 }
