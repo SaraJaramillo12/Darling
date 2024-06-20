@@ -475,7 +475,6 @@
 
 .footer {
   width: 100%;
-  max-width: 1300px;
   padding: 40px 20px;
   background-color: #093931ff;
   display: flex;
@@ -489,12 +488,15 @@
   margin-bottom: 40px;
   max-width: 1200px;
   width: 100%;
+  margin-right: 4rem;
 }
 
 .testimonial-header {
   max-width: 500px;
   margin-right: 20px;
   color: whitesmoke;
+  position: relative;
+  padding: 0 5rem 0 6rem;
 }
 
 .testimonial-header h2 {
@@ -518,8 +520,6 @@
   align-items: center;
   width: 90%;
   background-color: #171a1f4d;
-  padding: 10 px;
-  border-radius: 10px;
   flex-grow: 1;
 }
 
@@ -538,9 +538,11 @@
 }
 
 .testimonial-text p {
-  font-size: 16px;
+  font-size: 14px;
   font-family: Manrope;
   line-height: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .testimonial-text footer {
@@ -552,8 +554,8 @@
 
 .testimonial-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  top: 12rem;
 }
 
 .nav-button {
@@ -563,6 +565,7 @@
   font-size: 2em;
   cursor: pointer;
   margin: 5px;
+  position: relative;
 }
 
 .footer-links {
@@ -570,103 +573,117 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 20px 0;
+  padding: 0 50px;
   border-top: 1px solid #fff;
 }
 
-.brand h2 {
-  font-family: Manrope;
-  font-size: 30px;
-  margin: 0;
-  font-weight: 400;
-  color: #e6b800;
-  margin-top: 15px;
-  margin-bottom: 80px;
-}
-
-.brand p {
-  color: white;
-}
-
-.links {
-  font-family: Manrope;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.newsletter {
+.footer-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #093931ff;
+  color: #fff;
+  padding: 20px 0;
 }
 
-.links a {
+.footer-left {
+  flex: 1;
+}
+
+.footer-left .brand-name {
+  color: var(--color-secondary);
+  font-family: var(--tipography-headings);
+  font-size: 24px;
+  margin: 0;
+}
+
+.footer-left p {
+  margin-top: 5rem;
+}
+
+.footer-middle {
+  flex: 2;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+.footer-middle ul li a {
   color: #fff;
   text-decoration: none;
-  margin: 5px 0;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.footer-right {
+  flex: 2;
 }
 
-.newsletter h3 {
-  font-family: "Cormorant Garamond", serif;
-  margin: 0;
-  font-size: 20px;
-  color: white;
-}
-
-.newsletter p {
-  font-family: Manrope;
-  margin: 10px 0;
-  font-size: 15px;
-  color: white;
-}
-
-.newsletter form {
+.footer-right p {
+  margin: 0 0 10px 0;
   display: flex;
-  align-items: center;
+  position: relative;
+  font-family: var(--tipography-headings);
 }
 
-.newsletter input {
-  padding: 10px;
-  margin-right: 1px;
-  border: 1px solid #fff;
-  border-radius: 18px 0px 0px 18px;
-  background-color: transparent;
-  color: #fff;
+.footer-right form {
+  display: flex;
+  margin-bottom: 10px;
 }
 
-.newsletter button {
+.input-container {
+  position: relative;
+  flex: 1;
+}
+
+.input-container input {
+  border: #000;
+}
+
+.input-container input[type="email"] {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid white;
+  border-radius: 20px 0 0 20px;
+  background: url("/assets/Mail.svg") no-repeat;
+  background-position: 10px center;
+  background-size: 24px;
+}
+
+.footer-right button {
   padding: 10px;
-  color: #6b4a09ff;
   border: none;
-  border-radius: 0px 18px 18px 0px;
+  background-color: #d0b77e;
+  border-radius: 0 20px 20px 0;
   cursor: pointer;
-  background: #f2c66dff;
-  font-weight: bold;
 }
 
-.newsletter button:hover {
-  color: #6b4a09ff;
-  background: rgb(248, 205, 119);
+.footer-right button:hover {
+  background-color: #bfa065;
 }
 
 .social-icons {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
-  margin-left: 100px;
 }
 
-.social-icons i {
-  color: whitesmoke;
-  margin-bottom: 10px;
-  font-size: 24px;
+.social-icons a {
+  margin-left: 10px;
 }
 
+.social-icons img {
+  width: 19px;
+  height: 19px;
+}
+
+/* Media queries */
 @media (max-width: 850px) {
   html {
     font-size: 14px;
@@ -705,11 +722,11 @@
   }
 
   .header-section-images {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   margin-top: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -2rem;
 
     order: 1;
     align-items: center;
@@ -901,7 +918,7 @@
     width: 100%;
     position: relative;
     align-items: center;
-    left: 55px;
+    left: 45px;
   }
 
   .selection-item {
@@ -1003,8 +1020,24 @@
     justify-content: center;
     margin-top: 10px;
   }
-}
 
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    margin-bottom: 20px;
+  }
+  .footer-middle ul {
+    grid-template-columns: 1fr;
+  }
+  .footer-right p {
+    left: 0;
+  }
+}
 
 @media (max-width: 600px) {
   body {
@@ -1017,7 +1050,6 @@
 
   .header__menu {
     display: block;
-    
   }
 
   .header-section {
@@ -1042,7 +1074,7 @@
   }
 
   .image1 {
-    display: block; 
+    display: block;
     width: 80%;
     margin: 0 auto;
   }
@@ -1074,19 +1106,29 @@
 
   .header-item-product,
   .selection-item-product {
-    width: 45%; 
+    width: 45%;
     margin: 10px;
   }
 
   .product-list,
   .product-list-1 {
-    flex-wrap: wrap; 
-    justify-content: space-around; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .product-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    margin-left: 8rem;
   }
 
   .header-item-product img,
   .selection-item-product img {
-    aspect-ratio: auto; 
+    aspect-ratio: auto;
   }
 
   .history {
@@ -1116,7 +1158,8 @@
   .testimonial-header,
   .testimonial-content {
     max-width: 100%;
-    margin-right: 0;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
   }
 
   .testimonial-header h2 {
@@ -1144,4 +1187,3 @@
     margin-top: 10px;
   }
 }
-
