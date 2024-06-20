@@ -163,6 +163,21 @@
 
 .item .price {
   margin-right: 15rem;
+  font-weight: bold;
+}
+
+.details p {
+  font-weight: bold;
+}
+
+.details .code {
+  color: gray;
+  font-size: 10px;
+}
+
+.item i {
+  font-weight: bold;
+  color: gray;
 }
 
 .voucher {
@@ -264,7 +279,6 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .title h2 {
@@ -276,13 +290,13 @@
 }
 
 .title {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.title h5{
-    color: gray;
-    margin-right: 4rem;
+.title h5 {
+  color: gray;
+  margin-right: 4rem;
 }
 
 .suggested-items {
@@ -292,9 +306,8 @@
 }
 
 .suggested-item {
-  
   margin: 10px;
-  
+
   max-width: 200px;
   display: flex;
   flex-direction: column;
@@ -309,7 +322,6 @@
   border-radius: 5px 5px 0 0;
 }
 
-
 .suggested-item p {
   margin: 10px 0 0;
   padding: 5px 10px;
@@ -317,7 +329,6 @@
 }
 
 .head {
- 
   font-family: var(--tipography-headings);
   font-size: 20px;
   color: #333;
@@ -343,6 +354,121 @@
 }
 
 /* End Section Suggetions */
+
+/* Footer */
+footer {
+    background-color: #073b37;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left .brand-name {
+    color: var(--color-secondary);
+    font-family: var(--tipography-headings);
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-left p {
+    margin-top: 5rem;
+}
+
+.footer-middle {
+    flex: 2;
+}
+
+.footer-middle ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+
+.footer-middle ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-right {
+    flex: 2;
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 0 0 10px 0;
+    display: flex;
+    position: relative;
+    font-family: var(--tipography-headings);
+    left: 5%;
+}
+
+
+.footer-right form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    position: relative;
+    flex: 1;
+    
+}
+
+.input-container input {
+    border: #000;
+}
+
+.input-container input[type="email"] {
+    width: 80%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid white;
+    border-radius: 20px 0 0 20px;
+    background: url('/assets/Mail.svg') no-repeat;
+    background-position: 10px center;
+    background-size: 24px;
+}
+
+.footer-right button {
+    padding: 10px;
+    border: none;
+    background-color: #d0b77e;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.footer-right button:hover {
+    background-color: #bfa065;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-icons a {
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 19px;
+    height: 19px;
+}
+
+/* End Footer */
 
 /* Media queries */
 @media (max-width: 850px) {
@@ -375,6 +501,64 @@
   .payment-method {
     margin-bottom: 20px;
   }
+
+  .suggestions {
+    padding: 20px 10px;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title h2 {
+    margin-left: 0;
+  }
+
+  .title h5 {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .suggested-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suggested-item {
+    max-width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .footer-right form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-container input[type="email"] {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-right button {
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -385,5 +569,26 @@
   .order-summary,
   .payment-method {
     padding: 15px;
+  }
+
+  .suggestions {
+    padding: 10px 5px;
+  }
+
+  .suggested-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suggested-item {
+    max-width: 100%;
+  }
+
+  .footer-container {
+    padding: 10px;
+  }
+
+  .footer-left p {
+    margin-top: 1rem;
   }
 }
