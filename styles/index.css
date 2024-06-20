@@ -526,7 +526,6 @@
 .testimonial-image {
   width: 300px;
   height: 375px;
-  border-radius: 10px;
   margin-right: 20px;
   object-fit: cover;
 }
