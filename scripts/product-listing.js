@@ -17,6 +17,37 @@ function searchProducts(query) {
     });
 }
 
+// Punto 1
+
+function punto1 () {
+  const products = [
+      { id: "001", nombre: "Luxury Gems Necklace", codigo: "12502", type: 'necklaces' },
+      { id: "002", nombre: "Aurora Ring", codigo: "78205", type: 'rings' },
+      { id: "003", nombre: "Reflection Necklace", codigo: "", type: 'necklaces' },
+      { id: "004", nombre: "Dreamy infinity Ring", codigo: "", type: 'rings' },
+      { id: "005", nombre: "Opulent Jewels Ring", codigo: "", type: 'rings' },
+      { id: "006", nombre: "Serene solitaire Earrings", codigo: "", type: 'earrings' },
+      { id: "007", nombre: "Timeless Halo Earrings", codigo: "", type: 'earrings' },
+      { id: "008", nombre: "Exquisite Earrings", codigo: "", type: 'earrings' },
+
+  ]
+  
+  return products;
+}
+
+
+function punto2 (arr, type) {
+  const result = arr.filter((item) => {
+      return item.type === type
+  });
+
+  console.log(result)
+}
+
+punto2(punto1(), "aseo");
+
+
+
 // Función para ordenar productos por precio
 function sortProductsByPrice(products, order = "asc") {
   return products.sort((a, b) => {
