@@ -135,4 +135,3 @@ console.log(sortProductsByPrice(products, "desc"));
 // Probar la función de cálculo de total
 console.log("Total a pagar:");
 console.log(calculateTotal(products));
-
