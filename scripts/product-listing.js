@@ -1,32 +1,35 @@
 // Punto 1
 
-function punto1 () {
+function productList () {
   const products = [
       { id: "001", nombre: "Luxury Gems Necklace", codigo: "12502", type: 'necklaces' },
-      { id: "002", nombre: "Aurora Ring", codigo: "78205", type: 'rings' },
-      { id: "003", nombre: "Reflection Necklace", codigo: "", type: 'necklaces' },
-      { id: "004", nombre: "Dreamy infinity Ring", codigo: "", type: 'rings' },
-      { id: "005", nombre: "Opulent Jewels Ring", codigo: "", type: 'rings' },
-      { id: "006", nombre: "Serene solitaire Earrings", codigo: "", type: 'earrings' },
-      { id: "007", nombre: "Timeless Halo Earrings", codigo: "", type: 'earrings' },
-      { id: "008", nombre: "Exquisite Earrings", codigo: "", type: 'earrings' },
-
+      { id: "002", nombre: "Aurora Ring", codigo: "68205", type: 'rings' },
+      { id: "003", nombre: "Reflection Necklace", codigo: "90876", type: 'necklaces' },
+      { id: "004", nombre: "Dreamy infinity Ring", codigo: "18206", type: 'rings' },
+      { id: "005", nombre: "Opulent Jewels Ring", codigo: "74322", type: 'rings' },
+      { id: "006", nombre: "Serene solitaire Earrings", codigo: "90871", type: 'earrings' },
+      { id: "007", nombre: "Timeless Halo Earrings", codigo: "12567", type: 'earrings' },
+      { id: "008", nombre: "Exquisite Earrings", codigo: "12675", type: 'earrings' },
+      { id: "009", nombre: "Timeless Elegance Ring", codigo: "12890", type: 'rings' },
+      { id: "010", nombre: "Luxury Charms Ring", codigo: "78205", type: 'rings' },
+      { id: "011", nombre: "Blissful Bloom Ring", codigo: "18700", type: 'rings' },
+      { id: "012", nombre: "Sparkling Ring", codigo: "78005", type: 'rings' },
+      { id: "013", nombre: "Glimmering Ring", codigo: "17560", type: 'rings' },
   ]
   
   return products;
 }
 
-
-function punto2 (arr, type) {
+function filterProductsByType(arr, type) {
   const result = arr.filter((item) => {
-      return item.type === type
+    return item.type === type;
   });
 
-  console.log(result)
+  console.log(result);
+  return result;
 }
 
-punto2(punto1(), "aseo");
-
+filterProductsByType(productList(), "rings");
 
 // Función para ordenar productos por precio
 function sortProductsByPrice(products, order = "asc") {
@@ -49,23 +52,6 @@ function calculateTotal(products) {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-}
-
-// Obtener los productos desde el DOM
-function getProductsFromDOM() {
-  const productElements = document.querySelectorAll(".card");
-  const products = [];
-
-  productElements.forEach((element) => {
-    const name = element.querySelector("h2").innerText;
-    const price = parseFloat(
-      element.querySelector("p").innerText.replace("$", "")
-    );
-    // const imageUrl = element.querySelector("img").src;
-    products.push({ name, price, imageUrl });
-  });
-
-  return products;
 }
 
 // Renderizar los productos en el DOM
@@ -107,15 +93,6 @@ document.getElementById("sort-select").addEventListener("change", function () {
   renderProducts(sortedProducts);
 });
 
-// Inicializar la lista de productos
-document.addEventListener("DOMContentLoaded", function () {
-  const products = getProductsFromDOM();
-  renderProducts(products);
-
-  // Calcular y mostrar el total a pagar
-  const total = calculateTotal(products);
-  console.log(`Total a pagar: $${total}`);
-});
 
 // Productos para prueba
 const products = [
