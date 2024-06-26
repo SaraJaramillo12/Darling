@@ -32,7 +32,7 @@ function getProductsFromDOM() {
     const price = parseFloat(
       element.querySelector("p").innerText.replace("$", "")
     );
-    const imageUrl = element.querySelector("img").src;
+    // const imageUrl = element.querySelector("img").src;
     products.push({ name, price, imageUrl });
   });
 
@@ -106,4 +106,3 @@ console.log(sortProductsByPrice(products, "desc"));
 // Probar la función de cálculo de total
 console.log("Total a pagar:");
 console.log(calculateTotal(products));
-
