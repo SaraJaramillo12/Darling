@@ -1,3 +1,21 @@
+// Función para filtrar en el search bar
+const searchInput = document.getElementById("product-search");
+const productCards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("input", () => {
+    searchProducts(searchInput.value);
+});
+
+function searchProducts(query) {
+    productCards.forEach((product) => {
+        const name = product.querySelector("h2").textContent.toLowerCase();
+        if (name.includes(query.toLowerCase())) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
 
 // Función para ordenar productos por precio
 function sortProductsByPrice(products, order = "asc") {
@@ -20,23 +38,6 @@ function calculateTotal(products) {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-}
-
-// Obtener los productos desde el DOM
-function getProductsFromDOM() {
-  const productElements = document.querySelectorAll(".card");
-  const products = [];
-
-  productElements.forEach((element) => {
-    const name = element.querySelector("h2").innerText;
-    const price = parseFloat(
-      element.querySelector("p").innerText.replace("$", "")
-    );
-    // const imageUrl = element.querySelector("img").src;
-    products.push({ name, price, imageUrl });
-  });
-
-  return products;
 }
 
 // Renderizar los productos en el DOM
@@ -76,16 +77,6 @@ document.getElementById("sort-select").addEventListener("change", function () {
   const products = getProductsFromDOM();
   const sortedProducts = sortProductsByPrice(products, order);
   renderProducts(sortedProducts);
-});
-
-// Inicializar la lista de productos
-document.addEventListener("DOMContentLoaded", function () {
-  const products = getProductsFromDOM();
-  renderProducts(products);
-
-  // Calcular y mostrar el total a pagar
-  const total = calculateTotal(products);
-  console.log(`Total a pagar: $${total}`);
 });
 
 // Productos para prueba
