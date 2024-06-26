@@ -1,3 +1,22 @@
+// Función para filtrar en el search bar
+const searchInput = document.getElementById("product-search");
+const productCards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("input", () => {
+    searchProducts(searchInput.value);
+});
+
+function searchProducts(query) {
+    productCards.forEach((product) => {
+        const name = product.querySelector("h2").textContent.toLowerCase();
+        if (name.includes(query.toLowerCase())) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
 // Punto 1
 
 function productList () {
@@ -30,6 +49,7 @@ function filterProductsByType(arr, type) {
 }
 
 filterProductsByType(productList(), "rings");
+
 
 // Función para ordenar productos por precio
 function sortProductsByPrice(products, order = "asc") {
@@ -92,7 +112,6 @@ document.getElementById("sort-select").addEventListener("change", function () {
   const sortedProducts = sortProductsByPrice(products, order);
   renderProducts(sortedProducts);
 });
-
 
 // Productos para prueba
 const products = [
