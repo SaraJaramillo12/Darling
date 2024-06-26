@@ -199,6 +199,13 @@
   justify-content: space-around;
   padding: 20px;
 }
+.product-detail {
+  display: none;
+}
+
+:target {
+  display: flex;
+}
 
 .image-gallery {
   display: flex;
@@ -218,12 +225,14 @@
   margin-bottom: 10px;
   cursor: pointer;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
-.image-gallery .main-image {
+.image-gallery .main-image{
   width: 70%;
   height: auto;
 }
+
 
 .product-info {
   font-family: Arial, sans-serif;
@@ -416,21 +425,11 @@
   text-align: center;
 }
 
-.description-image img {
+.description-image video {
   height: auto;
   padding-top: 45px;
-}
-
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-  font-size: 2em;
-  cursor: pointer;
+  width: 1020px;
+  object-fit: cover;
 }
 
 /* End Section Description */
@@ -532,7 +531,7 @@
 
 .product-item p:nth-of-type(2) {
   margin-top: 5px;
-  
+
   color: #000;
 }
 
@@ -548,9 +547,6 @@
   width: 40px;
   background: linear-gradient(to right, transparent, white);
 }
-
-
-
 
 /* End Section Products Like */
 
@@ -599,7 +595,7 @@ footer.footer {
   align-items: center;
   width: 696px;
   height: 375px;
-  background-color: #171A1F4D;
+  background-color: #171a1f4d;
   flex-wrap: wrap;
 }
 
@@ -738,7 +734,7 @@ footer.footer {
   gap: 10px;
   margin-bottom: 10px;
   margin-left: 8.5rem;
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .social-icons i {
@@ -773,6 +769,13 @@ footer.footer {
     align-self: self-end;
     position: relative;
     right: 3rem;
+  }
+
+  .description-image video {
+    height: auto;
+    padding-top: 45px;
+    width: 800px;
+    object-fit: cover;
   }
 }
 
@@ -818,6 +821,13 @@ footer.footer {
     max-width: 100%;
     margin-bottom: 20px;
   }
+
+  .description-image video {
+    height: auto;
+    padding-top: 45px;
+    width: 600px;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 600px) {
@@ -847,6 +857,8 @@ footer.footer {
     flex-direction: column;
     align-items: center;
   }
+
+
   .main-image {
     align-self: center;
   }
@@ -884,4 +896,10 @@ footer.footer {
     width: 100%;
   }
 
+  .description-image video {
+    height: auto;
+    padding-top: 45px;
+    width: 400px;
+    object-fit: cover;
+  }
 }

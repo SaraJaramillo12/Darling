@@ -1,3 +1,4 @@
+
 // Función para ordenar productos por precio
 function sortProductsByPrice(products, order = "asc") {
   return products.sort((a, b) => {
@@ -105,3 +106,4 @@ console.log(sortProductsByPrice(products, "desc"));
 // Probar la función de cálculo de total
 console.log("Total a pagar:");
 console.log(calculateTotal(products));
+
