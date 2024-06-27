@@ -20,3 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//Cambiar de color el heart-icon
+document.addEventListener("DOMContentLoaded", function () {
+  let heartIcons = document.querySelectorAll(".heart-icon");
+
+  heartIcons.forEach(function (heartIcon) {
+    heartIcon.addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  });
+});
