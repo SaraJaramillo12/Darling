@@ -85,9 +85,12 @@ function renderProducts(products) {
 
     const figure = document.createElement("figure");
     const img = document.createElement("img");
+    const link = document.createElement("a")
+    link.href = product.href;
+    link.append(img)
     img.src = product.imageUrl;
     img.alt = product.name;
-    figure.appendChild(img);
+    figure.appendChild(link);
 
     const div = document.createElement("div");
     const h2 = document.createElement("h2");
@@ -108,26 +111,25 @@ function renderProducts(products) {
 // Manejar el evento de cambio en el select
 document.getElementById("sort-select").addEventListener("change", function () {
   const order = this.value;
-  const products = getProductsFromDOM();
   const sortedProducts = sortProductsByPrice(products, order);
   renderProducts(sortedProducts);
 });
 
 // Productos para prueba
-const products = [
-  { name: "Luxury Gems Necklace", price: 168.76, quantity: 1 },
-  { name: "Aurora Ring", price: 125.28, quantity: 2 },
-  { name: "Reflection Necklace", price: 620.73, quantity: 1 },
-  { name: "Dreamy infinity Ring", price: 327.71, quantity: 3 },
-];
+// const products = [
+//   { name: "Luxury Gems Necklace", price: 168.76, quantity: 1 },
+//   { name: "Aurora Ring", price: 125.28, quantity: 2 },
+//   { name: "Reflection Necklace", price: 620.73, quantity: 1 },
+//   { name: "Dreamy infinity Ring", price: 327.71, quantity: 3 },
+// ];
 
 // Probar la función de ordenar
-console.log("Productos ordenados por precio ascendente:");
-console.log(sortProductsByPrice(products, "asc"));
+// console.log("Productos ordenados por precio ascendente:");
+// console.log(sortProductsByPrice(products, "asc"));
 
-console.log("Productos ordenados por precio descendente:");
-console.log(sortProductsByPrice(products, "desc"));
+// console.log("Productos ordenados por precio descendente:");
+// console.log(sortProductsByPrice(products, "desc"));
 
-// Probar la función de cálculo de total
-console.log("Total a pagar:");
-console.log(calculateTotal(products));
+// // Probar la función de cálculo de total
+// console.log("Total a pagar:");
+// console.log(calculateTotal(products));
