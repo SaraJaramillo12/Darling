@@ -14,7 +14,7 @@
     <header class="header">
       <nav class="header__nav">
         <a class="header__logo" href="">Darling</a>
-        <div class="header__links">
+        <div class="header__links" id="navbar">
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/pages/product-listing.html">Shop</a></li>
@@ -76,7 +76,7 @@
           </div>
           <ul></ul>
         </div>
-        <button class="header__menu">
+        <button class="header__menu" id="menuButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="40px"
@@ -198,7 +198,72 @@
             <hr />
             <p class="total">Total <span>$1058.72</span></p>
           </div>
-          <button class="proceed-payment">Proceed to payment</button>
+          <button class="proceed-payment" id="proceed-payment">Proceed to payment</button>
+        </div>
+      </section>
+
+      <section  class="form-section" id="form-section">
+        <div class="container" id="container">
+          <h1>Checkout</h1>
+          <form id="checkout-form">
+            <label for="full-name">Nombre Completo:</label>
+            <div class="input-group">
+              <input type="text" id="full-name" name="full-name" />
+              <span class="validation-message" id="full-name-validation"></span>
+            </div>
+            <label for="phone">Número de Teléfono:</label>
+            <div class="input-group">
+              <input type="text" id="phone" name="phone" />
+              <span class="validation-message" id="phone-validation"></span>
+            </div>
+            <label for="address">Dirección:</label>
+            <div class="input-group">
+              <input type="text" id="address" name="address" />
+              <span class="validation-message" id="address-validation"></span>
+            </div>
+            <button type="submit">Continuar</button>
+          </form>
+        </div>
+
+        <div class="container" id="payment-container">
+          <h1>Agregar Método de Pago</h1>
+          <form id="payment-form">
+            <label for="email">Correo Electrónico:</label>
+            <div class="input-group">
+              <input type="email" id="email" name="email" />
+              <span class="validation-message" id="email-validation"></span>
+            </div>
+            <label for="card-name">Nombre de la Tarjeta:</label>
+            <div class="input-group">
+              <input type="text" id="card-name" name="card-name" />
+              <span class="validation-message" id="card-name-validation"></span>
+            </div>
+            <label for="card-number">Número de Tarjeta:</label>
+            <div class="input-group">
+              <input type="text" id="card-number" name="card-number" />
+              <img src="./images/visa.svg" alt="Visa" class="card-icon" />
+              <img src="./images/visa.svg" alt="Mastercard" class="card-icon" />
+              <img src="./images/visa.svg" alt="Amex" class="card-icon" />
+              <span
+                class="validation-message"
+                id="card-number-validation"
+              ></span>
+            </div>
+            <label for="expiration-date">Fecha de Caducidad:</label>
+            <div class="input-group">
+              <input type="month" id="expiration-date" name="expiration-date" />
+              <span
+                class="validation-message"
+                id="expiration-date-validation"
+              ></span>
+            </div>
+            <label for="cvv">CVV:</label>
+            <div class="input-group">
+              <input type="text" id="cvv" name="cvv" />
+              <span class="validation-message" id="cvv-validation"></span>
+            </div>
+            <button type="submit">Agregar Método de Pago</button>
+          </form>
         </div>
       </section>
 
@@ -288,5 +353,7 @@
         </div>
       </div>
     </footer>
+    <script src="/scripts/validation.js"></script>
+    <script src="/scripts/add-payment.js"></script>
   </body>
 </html>

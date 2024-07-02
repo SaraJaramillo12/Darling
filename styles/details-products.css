@@ -215,7 +215,6 @@
   border-radius: 5px;
 }
 
-
 .main-image {
   display: block;
   width: 100%;
@@ -231,14 +230,13 @@
   font-size: 26px;
 }
 
-
 .heart-icon {
-  color: #171A1F; 
+  color: #171a1f;
   transition: color 0.3s;
 }
 
 .heart-icon.active {
-  color: red; 
+  color: red;
 }
 
 .thumbnail-images {
@@ -256,11 +254,10 @@
   cursor: pointer;
 }
 
-.image-gallery .main-image{
+.image-gallery .main-image {
   width: 70%;
   height: auto;
 }
-
 
 .product-info {
   font-family: Arial, sans-serif;
@@ -783,12 +780,33 @@ footer.footer {
     font-size: 14px;
   }
 
+  .header__links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .header__links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header__links ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
   .header__menu {
     display: block;
   }
 
-  .header__links {
-    display: none;
+  .header__links.active {
+    display: flex;
   }
 
   .testimonial-nav {
@@ -805,9 +823,42 @@ footer.footer {
     width: 800px;
     object-fit: cover;
   }
+
+  .heart-icon {
+    color: var(--color-primary);
+  }
 }
 
 @media (max-width: 768px) {
+  .header__links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .header__links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header__links ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__links.active {
+    display: flex;
+  }
+
   .testimonial {
     flex-direction: column;
     align-items: center;
@@ -859,6 +910,35 @@ footer.footer {
 }
 
 @media (max-width: 600px) {
+  .header__links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .header__links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header__links ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__links.active {
+    display: flex;
+  }
+
   .testimonial-nav {
     display: flex;
     flex-direction: row;
@@ -885,7 +965,6 @@ footer.footer {
     flex-direction: column;
     align-items: center;
   }
-
 
   .main-image {
     align-self: center;

@@ -115,6 +115,16 @@ document.getElementById("sort-select").addEventListener("change", function () {
   renderProducts(sortedProducts);
 });
 
+//Activar y desactivar el menu
+document.getElementById("menuButton").addEventListener("click", function () {
+  var navbar = document.getElementById("navbar");
+  if (navbar.classList.contains("active")) {
+    navbar.classList.remove("active");
+  } else {
+    navbar.classList.add("active");
+  }
+});
+
 // Productos para prueba
 // const products = [
 //   { name: "Luxury Gems Necklace", price: 168.76, quantity: 1 },

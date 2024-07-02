@@ -334,7 +334,10 @@ height: 10vh;
   font-size: 1em;
   color: #666;
   line-height: 1.4em;
+
 }
+
+
 
 /* Estilos responsive */
 @media (max-width: 768px) {
