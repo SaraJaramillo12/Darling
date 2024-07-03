@@ -337,6 +337,11 @@
   margin-top: 5px;
 }
 
+.input-group .card-icon {
+  width: 24px;
+  height: 24px;
+  justify-content: space-evenly;
+}
 /* End Section check-out */
 
 /* Section Suggetions */
