@@ -1,3 +1,13 @@
+//Activar y desactivar el menu
+document.getElementById("menuButton").addEventListener("click", function () {
+  let navbar = document.getElementById("navbar");
+  if (navbar.classList.contains("active")) {
+    navbar.classList.remove("active");
+  } else {
+    navbar.classList.add("active");
+  }
+});
+
 // Función para filtrar en el search bar
 const searchInput = document.getElementById("product-search");
 const productCards = document.querySelectorAll(".card");
@@ -96,7 +106,7 @@ function renderProducts(products) {
     const h2 = document.createElement("h2");
     h2.innerText = product.name;
     const p = document.createElement("p");
-    p.innerText = `$${product.price.toFixed(2)}`;
+    p.innerText = `${product.price.toFixed(2)}`;
 
     div.appendChild(h2);
     div.appendChild(p);
@@ -108,6 +118,72 @@ function renderProducts(products) {
   });
 }
 
+// Escuchar eventos de clic en los botones de filtro
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filterType = button.dataset.type; // Obtener el tipo de filtro
+
+      // Filtrar productos por tipo
+      let filteredProducts;
+      if (filterType === "all") {
+        filteredProducts = products; // Mostrar todos los productos
+      } else {
+        filteredProducts = products.filter(product => product.type === filterType);
+      }
+
+      // Ordenar productos filtrados por precio (ascendente por defecto)
+      const sortedProducts = sortProductsByPrice(filteredProducts);
+
+      // Renderizar los productos ordenados en el DOM
+      renderProducts(sortedProducts);
+    });
+  });
+});
+
+function renderProducts(products) {
+  const productList = document.getElementById("product-list");
+  productList.innerHTML = "";
+
+  if (products.length === 0) {
+    const noProductsMessage = document.createElement("p");
+    noProductsMessage.innerText = "No products found for this category.";
+    productList.appendChild(noProductsMessage);
+    return;
+  }
+
+  products.forEach((product) => {
+    const productCard = document.createElement("article");
+    productCard.className = "card";
+
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const link = document.createElement("a");
+    link.href = product.href;
+    link.append(img);
+    img.src = product.imageUrl;
+    img.alt = product.name;
+    figure.appendChild(link);
+
+    const div = document.createElement("div");
+    const h2 = document.createElement("h2");
+    h2.innerText = product.name;
+    const p = document.createElement("p");
+    p.innerText = `${product.price.toFixed(2)}`;
+
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    productCard.appendChild(figure);
+    productCard.appendChild(div);
+
+    productList.appendChild(productCard);
+  });
+}
+
+
 // Manejar el evento de cambio en el select
 document.getElementById("sort-select").addEventListener("change", function () {
   const order = this.value;
@@ -115,15 +191,7 @@ document.getElementById("sort-select").addEventListener("change", function () {
   renderProducts(sortedProducts);
 });
 
-//Activar y desactivar el menu
-document.getElementById("menuButton").addEventListener("click", function () {
-  let navbar = document.getElementById("navbar");
-  if (navbar.classList.contains("active")) {
-    navbar.classList.remove("active");
-  } else {
-    navbar.classList.add("active");
-  }
-});
+
 
 // Productos para prueba
 // const products = [

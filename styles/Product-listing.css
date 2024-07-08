@@ -337,6 +337,40 @@ height: 10vh;
 
 }
 
+@media (max-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header__links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .header__links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header__links ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__links.active {
+    display: flex;
+  }
+}
 
 
 /* Estilos responsive */
