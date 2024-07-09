@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return valid;
   }
 
-  function validatePaymentForm() {
+  window.validatePaymentForm = function() {
     let valid = true;
 
     const email = paymentForm["email"].value.trim();
@@ -160,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
 
 
 
