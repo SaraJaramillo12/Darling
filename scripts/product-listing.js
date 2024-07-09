@@ -1,4 +1,4 @@
-//Activar y desactivar el menu
+// //Activar y desactivar el menu
 document.getElementById("menuButton").addEventListener("click", function () {
   let navbar = document.getElementById("navbar");
   if (navbar.classList.contains("active")) {
@@ -8,66 +8,33 @@ document.getElementById("menuButton").addEventListener("click", function () {
   }
 });
 
-// Función para filtrar en el search bar
-const searchInput = document.getElementById("product-search");
-const productCards = document.querySelectorAll(".card");
 
-searchInput.addEventListener("input", () => {
-    searchProducts(searchInput.value);
-});
+const API_URL = "http://localhost:3000/productos"; // URL del servidor JSON
 
-function searchProducts(query) {
-    productCards.forEach((product) => {
-        const name = product.querySelector("h2").textContent.toLowerCase();
-        if (name.includes(query.toLowerCase())) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
-        }
-    });
+async function fetchProducts() {
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) {
+      throw new Error("Network response was not ok " + response.statusText);
+    }
+    let data = await response.json();
+
+    // Ordenar los productos por id
+    data.sort((a, b) => a.id - b.id);
+
+    return data;
+  } catch (error) {
+    console.error("There has been a problem with your fetch operation:", error);
+  }
 }
-
-// Punto 1
-
-function productList () {
-  const products = [
-      { id: "001", nombre: "Luxury Gems Necklace", codigo: "12502", type: 'necklaces' },
-      { id: "002", nombre: "Aurora Ring", codigo: "68205", type: 'rings' },
-      { id: "003", nombre: "Reflection Necklace", codigo: "90876", type: 'necklaces' },
-      { id: "004", nombre: "Dreamy infinity Ring", codigo: "18206", type: 'rings' },
-      { id: "005", nombre: "Opulent Jewels Ring", codigo: "74322", type: 'rings' },
-      { id: "006", nombre: "Serene solitaire Earrings", codigo: "90871", type: 'earrings' },
-      { id: "007", nombre: "Timeless Halo Earrings", codigo: "12567", type: 'earrings' },
-      { id: "008", nombre: "Exquisite Earrings", codigo: "12675", type: 'earrings' },
-      { id: "009", nombre: "Timeless Elegance Ring", codigo: "12890", type: 'rings' },
-      { id: "010", nombre: "Luxury Charms Ring", codigo: "78205", type: 'rings' },
-      { id: "011", nombre: "Blissful Bloom Ring", codigo: "18700", type: 'rings' },
-      { id: "012", nombre: "Sparkling Ring", codigo: "78005", type: 'rings' },
-      { id: "013", nombre: "Glimmering Ring", codigo: "17560", type: 'rings' },
-  ]
-  
-  return products;
-}
-
-function filterProductsByType(arr, type) {
-  const result = arr.filter((item) => {
-    return item.type === type;
-  });
-
-  console.log(result);
-  return result;
-}
-
-filterProductsByType(productList(), "rings");
-
 
 // Función para ordenar productos por precio
 function sortProductsByPrice(products, order = "asc") {
   return products.sort((a, b) => {
     if (order === "asc") {
-      return a.price - b.price;
+      return a.precioUnitario - b.precioUnitario;
     } else if (order === "desc") {
-      return b.price - a.price;
+      return b.precioUnitario - a.precioUnitario;
     }
   });
 }
@@ -76,7 +43,7 @@ function sortProductsByPrice(products, order = "asc") {
 function calculateTotal(products) {
   return products
     .reduce((total, product) => {
-      return total + product.price * product.quantity;
+      return total + product.precioUnitario * product.cantidadEnStock;
     }, 0)
     .toLocaleString("en-US", {
       minimumFractionDigits: 2,
@@ -85,64 +52,6 @@ function calculateTotal(products) {
 }
 
 // Renderizar los productos en el DOM
-function renderProducts(products) {
-  const productList = document.getElementById("product-list");
-  productList.innerHTML = "";
-
-  products.forEach((product) => {
-    const productCard = document.createElement("article");
-    productCard.className = "card";
-
-    const figure = document.createElement("figure");
-    const img = document.createElement("img");
-    const link = document.createElement("a")
-    link.href = product.href;
-    link.append(img)
-    img.src = product.imageUrl;
-    img.alt = product.name;
-    figure.appendChild(link);
-
-    const div = document.createElement("div");
-    const h2 = document.createElement("h2");
-    h2.innerText = product.name;
-    const p = document.createElement("p");
-    p.innerText = `${product.price.toFixed(2)}`;
-
-    div.appendChild(h2);
-    div.appendChild(p);
-
-    productCard.appendChild(figure);
-    productCard.appendChild(div);
-
-    productList.appendChild(productCard);
-  });
-}
-
-// Escuchar eventos de clic en los botones de filtro
-document.addEventListener("DOMContentLoaded", () => {
-  const filterButtons = document.querySelectorAll(".filter");
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filterType = button.dataset.type; // Obtener el tipo de filtro
-
-      // Filtrar productos por tipo
-      let filteredProducts;
-      if (filterType === "all") {
-        filteredProducts = products; // Mostrar todos los productos
-      } else {
-        filteredProducts = products.filter(product => product.type === filterType);
-      }
-
-      // Ordenar productos filtrados por precio (ascendente por defecto)
-      const sortedProducts = sortProductsByPrice(filteredProducts);
-
-      // Renderizar los productos ordenados en el DOM
-      renderProducts(sortedProducts);
-    });
-  });
-});
-
 function renderProducts(products) {
   const productList = document.getElementById("product-list");
   productList.innerHTML = "";
@@ -161,17 +70,17 @@ function renderProducts(products) {
     const figure = document.createElement("figure");
     const img = document.createElement("img");
     const link = document.createElement("a");
-    link.href = product.href;
+    link.href = `details-products.html#product${product.id}`; // Enlace a la página de detalles del producto
     link.append(img);
-    img.src = product.imageUrl;
-    img.alt = product.name;
+    img.src = product.imagenes[0];
+    img.alt = product.nombre;
     figure.appendChild(link);
 
     const div = document.createElement("div");
     const h2 = document.createElement("h2");
-    h2.innerText = product.name;
+    h2.innerText = product.nombre;
     const p = document.createElement("p");
-    p.innerText = `${product.price.toFixed(2)}`;
+    p.innerText = `${product.precioUnitario.toFixed(2)}`;
 
     div.appendChild(h2);
     div.appendChild(p);
@@ -181,33 +90,72 @@ function renderProducts(products) {
 
     productList.appendChild(productCard);
   });
+
+  // Agregar el event listener para la barra de búsqueda
+  const searchInput = document.getElementById("product-search");
+  searchInput.addEventListener("input", () => {
+    searchProducts(searchInput.value);
+  });
 }
 
+// Función para filtrar en el search bar
+function searchProducts(query) {
+  const productCards = document.querySelectorAll(".card");
+  productCards.forEach((product) => {
+    const name = product.querySelector("h2").textContent.toLowerCase();
+    if (name.includes(query.toLowerCase())) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
 
-// Manejar el evento de cambio en el select
-document.getElementById("sort-select").addEventListener("change", function () {
-  const order = this.value;
-  const sortedProducts = sortProductsByPrice(products, order);
-  renderProducts(sortedProducts);
+// Escuchar eventos de clic en los botones de filtro
+document.addEventListener("DOMContentLoaded", async () => {
+  const products = await fetchProducts();
+
+  if (!products) {
+    console.error("Failed to fetch products");
+    return;
+  }
+
+  const filterButtons = document.querySelectorAll(".filter");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filterType = button.dataset.type; // Obtener el tipo de filtro
+
+      // Filtrar productos por tipo
+      let filteredProducts;
+      if (filterType === "all") {
+        filteredProducts = products; // Mostrar todos los productos ordenados por id
+      } else {
+        filteredProducts = products.filter(
+          (product) => product.type === filterType
+        );
+      }
+
+      // Ordenar productos filtrados por precio (ascendente por defecto) solo si no es "all"
+      const sortedProducts =
+        filterType === "all"
+          ? filteredProducts
+          : sortProductsByPrice(filteredProducts);
+
+      // Renderizar los productos ordenados en el DOM
+      renderProducts(sortedProducts);
+    });
+  });
+
+  // Manejar el evento de cambio en el select
+  document
+    .getElementById("sort-select")
+    .addEventListener("change", function () {
+      const order = this.value;
+      const sortedProducts = sortProductsByPrice(products, order);
+      renderProducts(sortedProducts);
+    });
+
+  // Inicializar con todos los productos ordenados ascendentemente por id
+  renderProducts(products);
 });
-
-
-
-// Productos para prueba
-// const products = [
-//   { name: "Luxury Gems Necklace", price: 168.76, quantity: 1 },
-//   { name: "Aurora Ring", price: 125.28, quantity: 2 },
-//   { name: "Reflection Necklace", price: 620.73, quantity: 1 },
-//   { name: "Dreamy infinity Ring", price: 327.71, quantity: 3 },
-// ];
-
-// Probar la función de ordenar
-// console.log("Productos ordenados por precio ascendente:");
-// console.log(sortProductsByPrice(products, "asc"));
-
-// console.log("Productos ordenados por precio descendente:");
-// console.log(sortProductsByPrice(products, "desc"));
-
-// // Probar la función de cálculo de total
-// console.log("Total a pagar:");
-// console.log(calculateTotal(products));
