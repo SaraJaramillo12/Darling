@@ -80,7 +80,7 @@ function renderProducts(products) {
     const h2 = document.createElement("h2");
     h2.innerText = product.nombre;
     const p = document.createElement("p");
-    p.innerText = `${product.precioUnitario.toFixed(2)}`;
+    p.innerText = `$${product.precioUnitario.toFixed(2)}`;
 
     div.appendChild(h2);
     div.appendChild(p);

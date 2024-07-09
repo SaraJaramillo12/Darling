@@ -57,6 +57,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Seleccionar color
+document.addEventListener("DOMContentLoaded", function () {
+  const colorOptions = document.querySelectorAll(".color-options > div");
+
+  colorOptions.forEach(function (colorOption) {
+    colorOption.addEventListener("click", function () {
+      colorOptions.forEach(function (option) {
+        option.classList.remove("selected");
+      });
+
+      this.classList.add("selected");
+    });
+  });
+});
+
 //Aumentar y disminuir la cantidad de los productos
 document.addEventListener("DOMContentLoaded", function () {
   const productDetails = document.querySelectorAll(".product-detail");

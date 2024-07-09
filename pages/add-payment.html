@@ -198,7 +198,7 @@
             <hr />
             <p class="total">Total <span>$1058.72</span></p>
           </div>
-          <button class="proceed-payment" id="proceed-payment">Proceed to payment</button>
+          <button class="proceed-payment" id="proceed-payment" onclick="mostrarPrimerModal()">Proceed to payment</button>
         </div>
       </section>
 
@@ -262,7 +262,7 @@
               <input type="text" id="cvv" name="cvv" />
               <span class="validation-message" id="cvv-validation"></span>
             </div>
-            <button type="submit">Agregar Método de Pago</button>
+            <button type="submit" id="paymentButton">Finalizar pago</button>
           </form>
         </div>
       </section>
@@ -353,7 +353,7 @@
         </div>
       </div>
     </footer>
-    <script src="/scripts/validation.js"></script>
-    <script src="/scripts/add-payment.js"></script>
+    <script src="../scripts/validation.js"></script>
+    <script src="../scripts/add-payment.js"></script>
   </body>
 </html>
