@@ -1,6 +1,6 @@
 import getData from '../helpers/getData.js';
 
-const API_URL = 'http://localhost:3000/';
+const API_URL = 'http://localhost:3001/';
 
 const endpoints = {
   productos: `${API_URL}productos`,
@@ -59,15 +59,15 @@ export async function renderProducts(products) {
     const link = document.createElement('a');
     link.href = `product-page.html?id=${product.id}`;
     link.append(img);
-    img.src = product.imageUrl;
-    img.alt = product.name;
+    img.src = product.imagenes[0];
+    img.alt = product.nombre;
     figure.appendChild(link);
 
     const div = document.createElement('div');
     const h2 = document.createElement('h2');
-    h2.innerText = product.name;
+    h2.innerText = product.nombre;
     const p = document.createElement('p');
-    p.innerText = `${product.price.toFixed(2)}`;
+    p.innerText = `${product.precioUnitario.toFixed(2)}`;
 
     div.appendChild(h2);
     div.appendChild(p);

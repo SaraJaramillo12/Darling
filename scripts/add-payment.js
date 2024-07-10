@@ -1,6 +1,6 @@
 import { toggleMenu } from "../modules/menu.js";
 import { proceedPayment } from "../modules/payment.js";
-import { handleCart, handleShoppingCart, handleCart } from "../modules/details.js";
+import {handleShoppingCart} from "../modules/details.js";
 
 async function setupPage() {
   await toggleMenu();
