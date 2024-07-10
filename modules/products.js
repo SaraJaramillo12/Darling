@@ -1,20 +1,14 @@
 import getData from "../helpers/getData.js";
 
-const API_URL = "http://localhost:3000/productos";
+const API_URL = "http://localhost:3000/";
 
 const endpoints = {
   productos: `${API_URL}productos`,
-  categorias: `${API_URL}categorias`,
 };
-
 
 export async function fetchProducts() {
   try {
-    const response = await fetch(API_URL);
-    if (!response.ok) {
-      throw new Error("Network response was not ok " + response.statusText);
-    }
-    let data = await response.json();
+    const data = await getData(endpoints.productos);
     data.sort((a, b) => a.id - b.id);
     return data;
   } catch (error) {
@@ -116,8 +110,6 @@ export async function renderProducts(products) {
 
       // Renderizar los productos ordenados en el DOM
       renderProducts(sortedProducts);
-
-      
     });
   });
 }
