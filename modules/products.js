@@ -123,3 +123,10 @@ export async function searchProducts(query) {
       : "none";
   });
 }
+
+//Nuevo codigo
+
+export const getProductById = (id) => {
+  return fetch(`${API_URL}productos?id=${id}`).then((res) => res.json());
+};
+ 
