@@ -199,9 +199,6 @@
   justify-content: space-around;
   padding: 20px;
 }
-.product-detail {
-  display: none;
-}
 
 :target {
   display: flex;

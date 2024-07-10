@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/product-page.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Details Products</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <a class="header__logo" href="">Darling</a>
+        <div class="header__links" id="navbar">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li class="active">
+              <a href="/pages/product-listing.html">Shop</a>
+            </li>
+            <li><a href="">Colletions</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <div class="header__buttons">
+            <button>
+              <img src="/assets/icons/user.svg" />
+            </button>
+            <button id="cart-icon">
+              <img src="/assets/icons/cart.svg" />
+            </button>
+          </div>
+          <ul></ul>
+        </div>
+        <button class="header__menu" id="menuButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            viewBox="0 -960 960 960"
+            width="40px"
+            fill="#F5D38EFF"
+          >
+            <path
+              d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Carrito -->
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-content">
+        <h3>Your cart</h3>
+        <button id="close-cart-button">✖</button>
+        <div class="cart-items">
+          <div class="product-item-like">
+            <figure>
+              <a href="productDetail.html">
+                <img src="/assets/product-10.webp" alt="Luxury Charms Ring" />
+              </a>
+            </figure>
+            <div class="product-details">
+              <p>Luxury Charms Ring</p>
+              <p>$620.73</p>
+            </div>
+          </div>
+          <div class="product-item-like">
+            <figure>
+              <a href="productDetail.html">
+                <img src="/assets/product-11.webp" alt="Exquisite Earrings" />
+              </a>
+            </figure>
+            <div class="product-details">
+              <p>Exquisite Earrings</p>
+              <p>$125.28</p>
+            </div>
+          </div>
+          <div class="product-item-like">
+            <figure>
+              <a href="productDetail.html">
+                <img src="/assets/product-12.webp" alt="Delights Earrings" />
+              </a>
+            </figure>
+            <div class="product-details">
+              <p>Delights Earrings</p>
+              <p>$327.71</p>
+            </div>
+          </div>
+        </div>
+        <div class="cart-total">
+          <p>Total: $<span id="cart-total-amount">1073.72</span></p>
+        </div>
+        <button id="continue-btn">Continue to checkout</button>
+      </div>
+    </aside>
+
+    <main class="product-details">
+      <nav class="breadcrumb">
+        <a href="/index.html">Home</a> &gt;
+        <a href="product-listing.html">Shop</a> &gt;
+        <span id="breadcrumb-name">Nombre del producto</span>
+      </nav>
+
+      <article class="product-detail">
+        <div class="image-gallery">
+          <img id="product-main-image" class="main-image" />
+          <span class="heart-icon">
+            <i class="bx bx-heart"></i>
+          </span>
+          <div class="thumbnail-images" id="product-images"></div>
+        </div>
+        <div class="product-info">
+          <h1 class="product-name" id="product-name"></h1>
+          <p class="product-code" id="product-code"></p>
+          <p class="price" id="product-price"></p>
+          <div class="color-selection">
+            <p>Color:</p>
+            <div class="color-options">
+              <div class="color-silver"></div>
+              <div class="color-rose-gold selected"></div>
+            </div>
+          </div>
+          <div class="size-selection">
+            <p>Tamaño:</p>
+            <div class="size-options">
+              <span class="size selected">48</span>
+              <span class="size">50</span>
+              <span class="size">52</span>
+              <span class="size">54</span>
+              <span class="size">56</span>
+              <span class="size">58</span>
+              <span class="size">60</span>
+              <span class="size">62</span>
+              <span class="size">64</span>
+              <span class="size">66</span>
+              <span class="size">68</span>
+              <span class="size">70</span>
+            </div>
+          </div>
+          <div class="quantity-selection">
+            <label for="quantity">Cantidad:</label>
+            <div class="quantity-input">
+              <button type="button" class="quantity-decrease">-</button>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button type="button" class="quantity-increase">+</button>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="button" class="add-to-bag">
+              <i class="bx bx-cart-add">Add to bag</i>
+            </button>
+            <button type="button" class="buy-now">Buy now</button>
+          </div>
+          <div class="additional-info">
+            <details>
+              <summary>Delivery</summary>
+              <p>Información sobre la entrega.</p>
+            </details>
+            <details>
+              <summary>Payment</summary>
+              <p>Información sobre el pago.</p>
+            </details>
+            <details>
+              <summary>Warranty</summary>
+              <p>Información sobre la garantía.</p>
+            </details>
+            <details>
+              <summary>Care</summary>
+              <p>Información sobre el cuidado del producto.</p>
+            </details>
+          </div>
+        </div>
+      </article>
+
+      <section class="description">
+        <h6>Description</h6>
+        <h2>Exquisite Elegance and Timeless Charm</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+          sapiente saepe? Ad, quibusdam? Ut, distinctio architecto ipsam nostrum
+          est unde iure aliquid temporibus laborum ab ratione a officia quo
+          illo? Quidem a repudiandae velit dicta accusamus laborum atque ea nam
+          officiis eum exercitationem, quasi commodi provident, dolor deserunt!
+          Nemo, officiis?
+        </p>
+        <div class="description-image">
+          <video src="../assets/description-video.mp4" controls muted></video>
+        </div>
+      </section>
+
+      <section class="information">
+        <div class="info">
+          <div class="info-item">
+            <i>
+              <img src="/assets/icons/delivery.svg" />
+            </i>
+            <p>Delivery</p>
+            <p>En blaza latine leisem tenorn penial voltem est</p>
+          </div>
+          <div class="info-item">
+            <i>
+              <img src="/assets/icons/customer-care.svg" />
+            </i>
+            <p>Customer care</p>
+            <p>En blaza latine leisem tenorn penial voltem est</p>
+          </div>
+          <div class="info-item">
+            <i>
+              <img src="/assets/icons/secure-payment.svg" />
+            </i>
+            <p>Secure payments</p>
+            <p>En blaza latine leisem tenorn penial voltem est</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="products-like">
+        <h3>You may also like</h3>
+        <div class="products-like">
+          <div class="product-list">
+            <div class="product-item">
+              <figure>
+                <img src="/assets/feacture-1.webp" alt="Radiance Necklace" />
+              </figure>
+              <p class="head">Radiance Necklace</p>
+              <p>$708.96</p>
+            </div>
+            <div class="product-item">
+              <figure>
+                <img src="/assets/feacture-2.webp" alt="Exquisite Earrings" />
+              </figure>
+              <p class="head">Exquisite Earrings</p>
+              <p>$123.20</p>
+            </div>
+            <div class="product-item">
+              <figure>
+                <img src="/assets/feacture-3.webp" alt="Glamour Necklace" />
+              </figure>
+              <p class="head">Glamour Necklace</p>
+              <p>$620.75</p>
+            </div>
+            <div class="product-item">
+              <figure>
+                <img src="/assets/like-4.webp" alt="Delights Earrings" />
+              </figure>
+              <p class="head">Delights Earrings</p>
+              <p>$327.71</p>
+            </div>
+            <div class="product-item">
+              <figure>
+                <img src="/assets/like-5.webp" alt="Dreamy" />
+              </figure>
+              <p class="head">Dreamy Necklace</p>
+              <p>$327.71</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="testimonial">
+        <div class="testimonial-header">
+          <h2>From the people</h2>
+          <p>
+            We love hearing from our customers! You're the reason we're here and
+            the reason we do what we do.
+          </p>
+        </div>
+        <div class="testimonial-content">
+          <img
+            src="../assets/footer-opinion.webp"
+            alt="Customer image"
+            class="testimonial-image"
+            id="testimonial-image"
+          />
+          <blockquote class="testimonial-text">
+            <p id="testimonial-text">
+              The ring itself is stunning, with a beautiful design that catches
+              the light and sparkles from every angle. The quality of the
+              materials used is evident, as the ring feels substantial and
+              durable. The gemstone is exquisite, with a vibrant color and
+              exceptional clarity.
+            </p>
+            <footer id="testimonial-footer">
+              <strong>Anna Fernandez</strong><br />USA
+            </footer>
+          </blockquote>
+          <nav class="testimonial-nav">
+            <button class="nav-button">
+              <figure>
+                <img src="/assets/button-left.svg" alt="button-left" />
+              </figure>
+            </button>
+            <button class="nav-button">
+              <figure>
+                <img src="/assets/button-right.svg" alt="button-right" />
+              </figure>
+            </button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="footer-links">
+        <div class="footer-container">
+          <div class="footer-left">
+            <h2 class="brand-name">Darling.</h2>
+            <p>© 2022 Brand, Inc.</p>
+          </div>
+          <div class="footer-middle">
+            <ul>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <p>Subscribe to our newsletter</p>
+            <p>For product announcements and exclusive insights</p>
+            <form>
+              <div class="input-container">
+                <input type="email" placeholder="Input your email" />
+              </div>
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+              <a href="#"
+                ><figure><img src="/assets/twitter.svg" alt="Twitter" /></figure
+              ></a>
+              <a href="#"
+                ><figure>
+                  <img src="/assets/facebook.svg" alt="Facebook" /></figure
+              ></a>
+              <a href="#"
+                ><figure>
+                  <img src="/assets/linkedin.svg" alt="Linkedin" /></figure
+              ></a>
+              <a href="#"
+                ><figure><img src="/assets/youtube.svg" alt="Youtube" /></figure
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script type="module" src="../scripts/details-products.js"></script>
+    <script type="module" src="../scripts/product-page.js"></script>
+  </body>
+</html>
