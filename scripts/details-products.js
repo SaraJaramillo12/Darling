@@ -5,6 +5,7 @@ import {
   selectProductSize,
   selectProductColor,
   adjustProductQuantity,
+  handleBuyNowClick,
   setupBreadcrumb,
 } from "../modules/details.js";
 import { testimonials2 } from "../modules/testimonials.js";
@@ -17,6 +18,7 @@ async function setupPage() {
   selectProductSize();
   selectProductColor();
   adjustProductQuantity();
+  handleBuyNowClick();
   setupBreadcrumb();
   setupTestimonials2(testimonials2);
 }

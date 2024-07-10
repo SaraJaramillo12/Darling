@@ -81,6 +81,16 @@ export async function adjustProductQuantity() {
   });
 }
 
+export async function handleBuyNowClick() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const buyNowButton = document.querySelector(".buy-now");
+
+    buyNowButton.addEventListener("click", function () {
+      const url = "../pages/add-payment.html";
+      window.location.href = url;
+    });
+  });
+}
 
 export async function setupBreadcrumb() {
   let productId = window.location.hash.substring(1);
