@@ -96,7 +96,7 @@
       <section class="checkout-section">
         <div class="order-summary">
           <h2>Order summary</h2>
-          <div class="item">
+          <!-- <div class="item">
             <figure>
               <img src="/assets/product-10.webp" alt="Luxury Charms Ring" />
             </figure>
@@ -128,7 +128,7 @@
             </div>
             <p class="price">$327.71</p>
             <i class="bx bx-trash"></i>
-          </div>
+          </div> -->
         </div>
         <div class="payment-method">
           <h2>Payment method</h2>
@@ -172,7 +172,7 @@
             <label for="voucher">Voucher</label>
             <div class="input-group">
               <input type="text" id="voucher" placeholder="$15 OFF" />
-              <button>Apply</button>
+              <button id="applyDiscount">Apply</button>
             </div>
             <i
               ><svg
@@ -190,13 +190,13 @@
               </svg>
             </i>
           </div>
-          <div class="summary">
+          <div class="summary" id="summary">
             <h6>Summary</h6>
-            <p>Subtotal <span>$1073.72</span></p>
-            <p>Discount <span>-$15</span></p>
+            <p>Subtotal <span class="subtotal">$0.00</span></p>
+            <p>Discount <span class="discount">-$0.00</span></p>
             <p>Fee <span>$0</span></p>
             <hr />
-            <p class="total">Total <span>$1058.72</span></p>
+            <p class="total">Total <span id="total-price">$0.00</span></p>
           </div>
           <button class="proceed-payment" id="proceed-payment">Proceed to payment</button>
         </div>
