@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/productos";
+const API_URL = "http://localhost:3000/productos";
 
 export async function setupCart() {
   const cartIcon = document.getElementById("cart-icon");

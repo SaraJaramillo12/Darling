@@ -1,6 +1,6 @@
 import getData from '../helpers/getData.js';
 
-const API_URL = 'http://localhost:3001/';
+const API_URL = 'http://localhost:3000/';
 
 const endpoints = {
   productos: `${API_URL}productos`,
